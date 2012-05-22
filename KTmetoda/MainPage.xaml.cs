@@ -20,5 +20,15 @@ namespace KTmetoda
         {
             InitializeComponent();
         }
+
+        private void buttonVnosPodatkov_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/PivotVnosPodatkov.xaml", UriKind.Relative));
+        }
+
+        private void buttonGraficniPrikaz_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/PivotGraficniPrikaz.xaml", UriKind.Relative));
+        }
     }
 }

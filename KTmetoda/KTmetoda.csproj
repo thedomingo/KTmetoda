@@ -52,6 +52,7 @@
       <HintPath>D:\Dodatne knjiznice VS2010\AmCharts.Windows.QuickCharts.WP.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Interop" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
@@ -67,6 +68,12 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PivotGraficniPrikaz.xaml.cs">
+      <DependentUpon>PivotGraficniPrikaz.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PivotVnosPodatkov.xaml.cs">
+      <DependentUpon>PivotVnosPodatkov.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Razredi\Alternativa.cs" />
     <Compile Include="Razredi\Parameter.cs" />
@@ -77,6 +84,14 @@
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
     <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PivotGraficniPrikaz.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PivotVnosPodatkov.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

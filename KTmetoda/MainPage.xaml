@@ -28,8 +28,9 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Button Content="vnos podatkov" Height="100" HorizontalAlignment="Center" Margin="4,118,2,0" Name="buttonVnosPodatkov" VerticalAlignment="Top" Width="450" />
-            <Button Content="grafični prikaz" Height="100" HorizontalAlignment="Center" Margin="5,248,1,0" Name="buttonGraficniPrikaz" VerticalAlignment="Top" Width="450" />
+            <Button Content="vnos podatkov" Height="100" HorizontalAlignment="Center" Margin="0,130,6,377" Name="buttonVnosPodatkov" VerticalAlignment="Center" Width="450" Click="buttonVnosPodatkov_Click" />
+            <Button Content="grafični prikaz" Height="100" HorizontalAlignment="Center" Margin="0,236,6,271" Name="buttonGraficniPrikaz" VerticalAlignment="Center" Width="450" Click="buttonGraficniPrikaz_Click" />
+            <TextBlock Height="133" HorizontalAlignment="Left" Margin="12,6,0,0" Name="textBlock1" Text="Vnesite podatke" VerticalAlignment="Top" Width="438" />
         </Grid>
     </Grid>
  
