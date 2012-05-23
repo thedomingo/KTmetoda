@@ -19,18 +19,30 @@
         <!--Pivot Control-->
         <controls:Pivot Title="kt metoda - vnos podatkov">
             <!--Pivot item one-->
-            <controls:PivotItem Header="parametri">
-                <Grid/>
+            <controls:PivotItem Header="parametri" Loaded="PivotItem_Loaded">
+                <Grid>
+                    <Button Content="+" Height="80" HorizontalAlignment="Left" Margin="68,524,0,0" Name="buttonNovParameter" VerticalAlignment="Top" Width="80" Click="buttonNovParameter_Click" />
+                    <Button Content="-" Height="80" HorizontalAlignment="Left" Margin="191,524,0,0" Name="buttonOdstraniParameter" VerticalAlignment="Top" Width="80" Click="buttonOdstraniParameter_Click" />
+                    <Button Content="?" Height="80" HorizontalAlignment="Left" Margin="311,524,0,0" Name="buttonPomoc" VerticalAlignment="Top" Width="80" Click="buttonPomoc_Click" />
+                    
+                    <ListBox Height="516" HorizontalAlignment="Left" Margin="5,6,0,0" Name="listBoxParametri" VerticalAlignment="Top" Width="450" ItemsSource="{Binding}" Loaded="listBoxParametri_Loaded">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="48" Text="{Binding Path=Naziv}"></TextBlock>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
             </controls:PivotItem>
 
             <!--Pivot item two-->
-            <controls:PivotItem Header="uteži">
-                <Grid/>
-            </controls:PivotItem>
             <controls:PivotItem Header="alternative">
                 <Grid />
             </controls:PivotItem>
         </controls:Pivot>
+        
     </Grid>
 
     <!--Sample code showing usage of ApplicationBar-->

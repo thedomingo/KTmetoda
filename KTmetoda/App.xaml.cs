@@ -12,6 +12,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using KTmetoda.Razredi;
 
 namespace KTmetoda
 {
@@ -102,6 +103,11 @@ namespace KTmetoda
                 System.Diagnostics.Debugger.Break();
             }
         }
+
+        /*
+         * NAJINA KODA
+         * */
+        public static SeznamParametrov seznamParametrov = new SeznamParametrov();
 
         #region Phone application initialization
 

@@ -12,21 +12,23 @@ using System.Collections.Generic;
 
 namespace KTmetoda.Razredi
 {
-    public class Parameter
+    public class SeznamParametrov
     {
-        public string Naziv { get; set; }
-        public int Utez { get; set; }
-        public int Vrednost { get; set; }
+        private List<Parameter> seznamParametrov=new List<Parameter>();
 
-        public Parameter(string ime)
+        public void DodajParameter(Parameter p)
         {
-            Naziv = ime;
+            seznamParametrov.Add(p);
         }
 
-
-        public Parameter()
+        public List<Parameter> VrniVseParametre()
         {
-            // TODO: Complete member initialization
+            return seznamParametrov;
+        }
+
+        public void OdstraniParameter(int id)
+        {
+            seznamParametrov.RemoveAt(id);
         }
     }
 }
