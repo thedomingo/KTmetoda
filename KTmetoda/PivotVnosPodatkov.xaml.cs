@@ -16,22 +16,28 @@ namespace KTmetoda
 {
     public partial class PivotVnosPodatkov : PhoneApplicationPage
     {
+        //Deklaracija spremenljivk
         Parameter p = new Parameter();
+        Alternativa a = new Alternativa();
+
         public PivotVnosPodatkov()
         {
             InitializeComponent();
         }
 
+        //???????????
         void PivotVnosPodatkov_Loaded(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
         }
 
+        //Gumb za dodajanje novega parametra
         private void buttonNovParameter_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/DodajParameter.xaml", UriKind.Relative));
         }
 
+        //Gumb pomoč
         private void buttonPomoc_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/Pomoc.xaml", UriKind.Relative));
@@ -42,11 +48,14 @@ namespace KTmetoda
             listBoxParametri.ItemsSource = App.seznamParametrov.VrniVseParametre();
         }
 
+        //Gumb za odstranjevanje parametra
         private void buttonOdstraniParameter_Click(object sender, RoutedEventArgs e)
         {
+            //Pridobitev id parametra
             int id = listBoxParametri.SelectedIndex;
 
-            if (id!=-1)
+            //Objava napake če id ni izbran
+            if (id != -1)
             {
                 App.seznamParametrov.OdstraniParameter(id);
                 NavigationService.Navigate(new Uri(NavigationService.Source + "?Refresh=true", UriKind.Relative));
@@ -56,17 +65,29 @@ namespace KTmetoda
                 MessageBox.Show("Izbran ni noben parameter!");
             }
 
-            
-        }
 
+        }
+        //????????
         private void OsveziPodatke()
         {
             listBoxParametri.ItemsSource = App.seznamParametrov.VrniVseParametre();
         }
-
+        //???????
         private void listBoxParametri_Loaded(object sender, RoutedEventArgs e)
         {
             listBoxParametri.ItemsSource = App.seznamParametrov.VrniVseParametre();
+        }
+
+        //Gumb za dodajanje nove alternative
+        private void buttonNovaAlternativa_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        //Gumb za odstranjevanje alternative
+        private void buttonOdstraniAlternativo_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

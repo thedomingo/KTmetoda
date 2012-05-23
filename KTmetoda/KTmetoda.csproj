@@ -83,6 +83,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Razredi\Alternativa.cs" />
     <Compile Include="Razredi\Parameter.cs" />
+    <Compile Include="Razredi\SeznamAlternativ.cs" />
     <Compile Include="Razredi\SeznamParametrov.cs" />
   </ItemGroup>
   <ItemGroup>

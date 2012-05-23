@@ -14,13 +14,17 @@ namespace KTmetoda.Razredi
 {
     public class Parameter
     {
+        //Deklaracija spremenljivk
         public string Naziv { get; set; }
         public int Utez { get; set; }
         public int Vrednost { get; set; }
 
-        public Parameter(string ime)
+        //Konstruktorji
+        public Parameter(string ime, int utez)
         {
             Naziv = ime;
+            //Dodana utež
+            Utez = utez;
         }
 
 

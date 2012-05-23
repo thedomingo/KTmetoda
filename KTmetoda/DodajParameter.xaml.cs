@@ -24,13 +24,32 @@ namespace KTmetoda
 
         private void buttonDodajParameter_Click(object sender, RoutedEventArgs e)
         {
+            //Dodajanje imena parametra
             textBoxImeParametra.Focus();
             string s = textBoxImeParametra.Text;
-            textBoxImeParametra.Text = "";
 
-            App.seznamParametrov.DodajParameter(new Parameter(s));
+            //Dodajanje uteži parametru, ter v razredu parameter konstruktorju dodana utež
+            VrednostUtezi.Text = ParameterVrednostSlider.Value.ToString();
+            int utez = Convert.ToInt32(ParameterVrednostSlider.Value);
 
-            NavigationService.Navigate(new Uri("/PivotVnosPodatkov.xaml", UriKind.Relative));
-        }        
+            //Dodajanje parametra
+            if (s == "")
+            {
+                MessageBox.Show("Ime parametra ni vpisano!");
+                NavigationService.Navigate(new Uri(NavigationService.Source + "?Refresh=true", UriKind.Relative));
+            }
+            else
+            {
+                App.seznamParametrov.DodajParameter(new Parameter(s, utez));
+
+                //Vrnitev nazaj na stran z vnosom podatkov
+                NavigationService.Navigate(new Uri("/PivotVnosPodatkov.xaml", UriKind.Relative));
+            }
+        }
+
+        private void ParameterVrednostSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+          ParameterVrednostSlider.Value = Math.Round(e.NewValue);
+        }
     }
 }

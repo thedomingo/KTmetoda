@@ -14,7 +14,19 @@ namespace KTmetoda.Razredi
 {
     public class Alternativa
     {
+        //Deklaracij spremenljivk
         public string Naziv { get; set; }
         public List<Parameter> SeznamParametrov { get; set; }
+
+        //Konstruktorji
+        public Alternativa(string naziv, List<Parameter> seznam)
+        {
+            Naziv = naziv;
+            SeznamParametrov = seznam;
+        }
+
+        public Alternativa()
+        {
+        }
     }
 }
