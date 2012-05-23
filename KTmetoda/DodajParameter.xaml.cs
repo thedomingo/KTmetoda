@@ -49,6 +49,7 @@ namespace KTmetoda
 
         private void ParameterVrednostSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
+            //Zaokroževanje številk pri sliderju
           ParameterVrednostSlider.Value = Math.Round(e.NewValue);
         }
     }

@@ -25,11 +25,7 @@ namespace KTmetoda
             InitializeComponent();
         }
 
-        //???????????
-        void PivotVnosPodatkov_Loaded(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+
 
         //Gumb za dodajanje novega parametra
         private void buttonNovParameter_Click(object sender, RoutedEventArgs e)
@@ -67,12 +63,8 @@ namespace KTmetoda
 
 
         }
-        //????????
-        private void OsveziPodatke()
-        {
-            listBoxParametri.ItemsSource = App.seznamParametrov.VrniVseParametre();
-        }
-        //???????
+
+        //Nalaganje podatkov v listbox
         private void listBoxParametri_Loaded(object sender, RoutedEventArgs e)
         {
             listBoxParametri.ItemsSource = App.seznamParametrov.VrniVseParametre();
