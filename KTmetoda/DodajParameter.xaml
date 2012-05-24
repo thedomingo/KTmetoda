@@ -11,7 +11,15 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
+
+    <phone:PhoneApplicationPage.Resources>
+        <shell:ApplicationBar x:Key="VnosParameteraAppBar" IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.save.rest.png" Text="shrani" Click="ButtonShraniParameter_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.cancel.rest.png" Text="prekliči" Click="ButtonPrekliciParameter_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.questionmark.rest.png" Text="pomoč" Click="ButtonPomoc_Click"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.Resources>
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -30,23 +38,10 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,17,0,0" Name="textBlock1" Text="Ime parametra" VerticalAlignment="Top" />
             <TextBox Height="72" HorizontalAlignment="Left" Margin="0,47,0,0" Name="textBoxImeParametra" Text="" VerticalAlignment="Top" Width="460" />
-            <Button Content="Dodaj" Height="72" HorizontalAlignment="Left" Margin="159,384,0,0" Name="buttonDodajParameter" VerticalAlignment="Top" Width="160" Click="buttonDodajParameter_Click" />
-            <Slider Height="100" HorizontalAlignment="Left" Margin="0,278,0,0" Name="ParameterVrednostSlider" VerticalAlignment="Top" Width="460" Maximum="10" Minimum="0" LargeChange="1.0" SmallChange="1.0" ValueChanged="ParameterVrednostSlider_ValueChanged" />
-            <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,183,0,0" Name="textBlock2" Text="Utež parametra" VerticalAlignment="Top" />
-            <TextBlock Height="52" HorizontalAlignment="Left" Margin="16,220,0,0" Name="VrednostUtezi" Text="{Binding Path=Value, ElementName=ParameterVrednostSlider}" VerticalAlignment="Top" FontSize="36" Width="auto" />
+            <Slider Height="100" HorizontalAlignment="Left" Margin="0,191,0,0" Name="ParameterVrednostSlider" VerticalAlignment="Top" Width="460" Maximum="10" Minimum="0" LargeChange="1.0" SmallChange="1.0" ValueChanged="ParameterVrednostSlider_ValueChanged" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,136,0,0" Name="textBlock2" Text="Utež parametra" VerticalAlignment="Top" />
+            <TextBlock Height="52" HorizontalAlignment="Left" Margin="16,162,0,0" Name="VrednostUtezi" Text="{Binding Path=Value, ElementName=ParameterVrednostSlider}" VerticalAlignment="Top" FontSize="36" Width="auto" />
         </Grid>
-    </Grid>
-
-    <!--Sample code showing usage of ApplicationBar-->
-    <!--<phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
-            <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
-                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
-            </shell:ApplicationBar.MenuItems>
-        </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>-->
+    </Grid>  
 
 </phone:PhoneApplicationPage>

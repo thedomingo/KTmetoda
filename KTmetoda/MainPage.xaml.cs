@@ -30,5 +30,16 @@ namespace KTmetoda
         {
             NavigationService.Navigate(new Uri("/PivotGraficniPrikaz.xaml", UriKind.Relative));
         }
+
+        private void PhoneApplicationPage_BackKeyPress(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (NavigationService.CanGoBack)
+            {
+                while (NavigationService.RemoveBackEntry() != null)
+                {
+                    NavigationService.RemoveBackEntry();
+                }
+            }
+        }
     }
 }

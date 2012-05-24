@@ -11,6 +11,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using KTmetoda.Razredi;
+using Microsoft.Phone.Shell;
 
 namespace KTmetoda
 {
@@ -22,10 +23,16 @@ namespace KTmetoda
             InitializeComponent();
         }
 
-        private void buttonDodajParameter_Click(object sender, RoutedEventArgs e)
+        private void ParameterVrednostSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            //Zaokroževanje številk pri sliderju
+          ParameterVrednostSlider.Value = Math.Round(e.NewValue);
+        }
+
+        private void ButtonShraniParameter_Click(object sender, EventArgs e)
         {
             //Dodajanje imena parametra
-            textBoxImeParametra.Focus();
+
             string s = textBoxImeParametra.Text;
 
             //Dodajanje uteži parametru, ter v razredu parameter konstruktorju dodana utež
@@ -38,6 +45,13 @@ namespace KTmetoda
                 MessageBox.Show("Ime parametra ni vpisano!");
                 NavigationService.Navigate(new Uri(NavigationService.Source + "?Refresh=true", UriKind.Relative));
             }
+            else if(utez==0)
+            {
+                MessageBox.Show("Utež ni nastavljena!");
+                NavigationService.Navigate(new Uri(NavigationService.Source + "?Refresh=true", UriKind.Relative));
+
+                
+            }
             else
             {
                 App.seznamParametrov.DodajParameter(new Parameter(s, utez));
@@ -47,10 +61,21 @@ namespace KTmetoda
             }
         }
 
-        private void ParameterVrednostSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        private void ButtonPrekliciParameter_Click(object sender, EventArgs e)
         {
-            //Zaokroževanje številk pri sliderju
-          ParameterVrednostSlider.Value = Math.Round(e.NewValue);
+            NavigationService.Navigate(new Uri("/PivotVnosPodatkov.xaml", UriKind.Relative));
+        }
+
+        private void ButtonPomoc_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Pomoc.xaml", UriKind.Relative));
+        }
+
+        private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            
+            ApplicationBar = ((ApplicationBar)Resources["VnosParameteraAppBar"]);
+            textBoxImeParametra.Focus();
         }
     }
 }
