@@ -57,18 +57,18 @@ namespace KTmetoda
                 App.seznamParametrov.DodajParameter(new Parameter(s, utez));
 
                 //Vrnitev nazaj na stran z vnosom podatkov
-                NavigationService.Navigate(new Uri("/PivotVnosPodatkov.xaml", UriKind.Relative));
+                NavigationService.Navigate(new Uri("/View/PivotVnosPodatkov.xaml", UriKind.Relative));
             }
         }
 
         private void ButtonPrekliciParameter_Click(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/PivotVnosPodatkov.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/View/PivotVnosPodatkov.xaml", UriKind.Relative));
         }
 
         private void ButtonPomoc_Click(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Pomoc.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/View/Pomoc.xaml", UriKind.Relative));
         }
 
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)

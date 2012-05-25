@@ -65,19 +65,22 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DodajParameter.xaml.cs">
+    <Compile Include="View\DodajAlternativo.xaml.cs">
+      <DependentUpon>DodajAlternativo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DodajParameter.xaml.cs">
       <DependentUpon>DodajParameter.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PivotGraficniPrikaz.xaml.cs">
+    <Compile Include="View\PivotGraficniPrikaz.xaml.cs">
       <DependentUpon>PivotGraficniPrikaz.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PivotVnosPodatkov.xaml.cs">
+    <Compile Include="View\PivotVnosPodatkov.xaml.cs">
       <DependentUpon>PivotVnosPodatkov.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pomoc.xaml.cs">
+    <Compile Include="View\Pomoc.xaml.cs">
       <DependentUpon>Pomoc.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,7 +94,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
-    <Page Include="DodajParameter.xaml">
+    <Page Include="View\DodajAlternativo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DodajParameter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -99,15 +106,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PivotGraficniPrikaz.xaml">
+    <Page Include="View\PivotGraficniPrikaz.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PivotVnosPodatkov.xaml">
+    <Page Include="View\PivotVnosPodatkov.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pomoc.xaml">
+    <Page Include="View\Pomoc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

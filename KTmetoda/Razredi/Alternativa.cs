@@ -28,5 +28,10 @@ namespace KTmetoda.Razredi
         public Alternativa()
         {
         }
+
+        public Alternativa(List<Parameter> seznam)
+        {
+            SeznamParametrov = seznam;
+        }
     }
 }

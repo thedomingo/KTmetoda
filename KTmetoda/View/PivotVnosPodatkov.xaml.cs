@@ -62,7 +62,7 @@ namespace KTmetoda
 
         private void ButtonParameterDodaj_Click(object sender, EventArgs e)
         {
-            (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/DodajParameter.xaml", UriKind.RelativeOrAbsolute));
+            (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/View/DodajParameter.xaml", UriKind.RelativeOrAbsolute));
         }
 
         private void ButtonParameterUredi_Click(object sender, EventArgs e)
@@ -88,12 +88,12 @@ namespace KTmetoda
 
         private void buttonPomoc_Click(object sender, EventArgs e)
         {
-            (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/Pomoc.xaml", UriKind.RelativeOrAbsolute));
+            (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/View/Pomoc.xaml", UriKind.RelativeOrAbsolute));
         }
 
         private void ButtonAlternativaDodaj_Click(object sender, EventArgs e)
         {
-
+            NavigationService.Navigate(new Uri("/View/DodajAlternativo.xaml", UriKind.Relative));
         }
 
         private void ButtonAlternativaOdstrani_Click(object sender, EventArgs e)
@@ -102,6 +102,11 @@ namespace KTmetoda
         }
 
         private void ButtonAlternativaUredi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBoxAlternative_Loaded(object sender, RoutedEventArgs e)
         {
 
         }

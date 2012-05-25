@@ -23,12 +23,12 @@ namespace KTmetoda
 
         private void buttonVnosPodatkov_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/PivotVnosPodatkov.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/View/PivotVnosPodatkov.xaml", UriKind.Relative));
         }
 
         private void buttonGraficniPrikaz_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/PivotGraficniPrikaz.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/View/PivotGraficniPrikaz.xaml", UriKind.Relative));
         }
 
         private void PhoneApplicationPage_BackKeyPress(object sender, System.ComponentModel.CancelEventArgs e)

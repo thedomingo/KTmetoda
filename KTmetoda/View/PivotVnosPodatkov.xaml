@@ -67,11 +67,11 @@
             <controls:PivotItem Header="alternative">
                 <Grid>
                     <!--Popravljen list box-->
-                    <ListBox Height="516" HorizontalAlignment="Left" Margin="5,6,0,0" Name="listBoxAlternative" VerticalAlignment="Top" Width="450" ItemsSource="{Binding}" Loaded="listBoxParametri_Loaded">
+                    <ListBox Height="516" HorizontalAlignment="Left" Margin="5,6,0,0" Name="listBoxAlternative" VerticalAlignment="Top" Width="450" ItemsSource="{Binding}" Loaded="listBoxAlternative_Loaded">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel>
-                                    <TextBlock FontSize="48" Text="{Binding Path=Naziv}" Style="{StaticResource PhoneTextExtraLargeStyle}" ></TextBlock>
+                                    <TextBlock FontSize="48" Text="{Binding Path=Naziv}"></TextBlock>
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock FontSize="30" Text="Utež parametra:" Style="{StaticResource PhoneTextSubtleStyle}" ></TextBlock>
                                         <TextBlock FontSize="30" Text="{Binding Path=Utez}" Style="{StaticResource PhoneTextSubtleStyle}" ></TextBlock>
