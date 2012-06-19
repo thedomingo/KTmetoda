@@ -108,6 +108,7 @@ namespace KTmetoda
          * NAJINA KODA
          * */
         public static SeznamParametrov seznamParametrov = new SeznamParametrov();
+        public static SeznamAlternativ seznamAlternativ = new SeznamAlternativ();
 
         #region Phone application initialization
 

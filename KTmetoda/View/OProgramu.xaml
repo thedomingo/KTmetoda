@@ -1,17 +1,17 @@
 ﻿<phone:PhoneApplicationPage 
-    x:Class="KTmetoda.MainPage"
+    x:Class="KTmetoda.View.OProgramu"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    shell:SystemTray.IsVisible="True" BackKeyPress="PhoneApplicationPage_BackKeyPress" Loaded="PhoneApplicationPage_Loaded">
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -22,17 +22,20 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="kt metoda - seminarska naloga" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="meni" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock x:Name="ApplicationTitle" Text="k-t metoda" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="o programu" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Image Height="245" HorizontalAlignment="Left" Margin="90,-22,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="277" Source="/KTmetoda;component/Images/background2.png" />
-            <Button Content="vnos podatkov" Height="100" HorizontalAlignment="Center" Margin="0,213,6,294" Name="buttonVnosPodatkov" VerticalAlignment="Center" Width="450" Click="buttonVnosPodatkov_Click" />
-            <Button Content="grafični prikaz" Height="100" HorizontalAlignment="Center" Margin="0,319,6,188" Name="buttonGraficniPrikaz" VerticalAlignment="Center" Width="450" Click="buttonGraficniPrikaz_Click" />
-            <TextBlock Height="76" HorizontalAlignment="Left" Margin="12,463,0,0" Name="rezultat" Text="" VerticalAlignment="Top" FontSize="32" Width="auto" />
-            <Button Visibility="Collapsed"   Content="Počisti" Height="72" HorizontalAlignment="Left" Margin="12,535,0,0" Name="btnPocisti" VerticalAlignment="Top" Width="160" Click="btnPocisti_Click" />
+            <TextBlock Height="69" HorizontalAlignment="Left" Margin="9,24,0,0" Name="textBlock1" Text="avtorja" VerticalAlignment="Top" FontSize="48" Width="171" />
+            <TextBlock FontSize="48" Height="69" HorizontalAlignment="Left" Margin="12,222,0,0" Name="textBlock2" Text="verzija" VerticalAlignment="Top" Width="171" />
+            <TextBlock Height="46" HorizontalAlignment="Left" Margin="80,99,0,0" Name="textBlock3" Text="Domen Hrastnik" VerticalAlignment="Top" FontSize="32" Width="258" />
+            <TextBlock Height="43" HorizontalAlignment="Left" Margin="80,151,0,0" Name="textBlock4" Text="Armin Plohl" VerticalAlignment="Top" FontSize="32" Width="201" />
+            <TextBlock Height="50" HorizontalAlignment="Left" Margin="80,297,0,0" Name="textBlock5" Text="1.0.0" VerticalAlignment="Top" FontSize="32" Width="103" />
+            <TextBlock FontSize="48" Height="69" HorizontalAlignment="Left" Margin="12,386,0,0" Name="textBlock6" Text="kontakt" VerticalAlignment="Top" Width="171" />
+            <TextBlock FontSize="26" Height="46" HorizontalAlignment="Left" Margin="80,461,0,0" Name="textBlock7" Text="domen.hrastnik@gmail.com" VerticalAlignment="Top" Width="370" />
+            <TextBlock FontSize="26" Height="43" HorizontalAlignment="Left" Margin="80,513,0,0" Name="textBlock8" Text="arminplohl@gmail.com" VerticalAlignment="Top" Width="282" />
         </Grid>
     </Grid>
  

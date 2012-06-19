@@ -32,6 +32,10 @@ namespace KTmetoda
         private void ButtonShraniParameter_Click(object sender, EventArgs e)
         {
             //Dodajanje imena parametra
+            if (App.seznamAlternativ.SteviloAlternativ() > 0)
+            {
+                App.seznamAlternativ.Pocisti();
+            }
 
             string s = textBoxImeParametra.Text;
 
@@ -76,6 +80,11 @@ namespace KTmetoda
             
             ApplicationBar = ((ApplicationBar)Resources["VnosParameteraAppBar"]);
             textBoxImeParametra.Focus();
+        }
+
+        private void buttonOProgramu_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/View/OProgramu.xaml", UriKind.Relative));
         }
     }
 }

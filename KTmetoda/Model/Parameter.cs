@@ -25,7 +25,6 @@ namespace KTmetoda.Razredi
             Naziv = ime;
             //Dodana utež
             Utez = utez;
-            Vrednost = 0;
         }
 
 

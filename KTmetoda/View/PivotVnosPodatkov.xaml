@@ -20,9 +20,9 @@
             <shell:ApplicationBarIconButton IconUri="/Images/appbar.back.rest.png" Text="meni" Click="ButtonMeni_Click" />
             <shell:ApplicationBarIconButton IconUri="/Images/appbar.add.rest.png" Text="Dodaj" Click="ButtonParameterDodaj_Click" />
             <shell:ApplicationBarIconButton IconUri="/Images/appbar.delete.rest.png" Text="Odstrani" Click="ButtonParameterOdstrani_Click" />
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar.edit.rest.png" Text="Uredi" Click="ButtonParameterUredi_Click" />
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="pomoč" Click="buttonPomoc_Click" />
+                <shell:ApplicationBarMenuItem Text="o programu" Click="buttonOProgramu_Click" />
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
 
@@ -34,6 +34,7 @@
             <shell:ApplicationBarIconButton IconUri="/Images/appbar.edit.rest.png" Text="Uredi" Click="ButtonAlternativaUredi_Click" />
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="pomoč" Click="buttonPomoc_Click" />
+                <shell:ApplicationBarMenuItem Text="o programu" Click="buttonOProgramu_Click" />
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.Resources>
@@ -59,6 +60,7 @@
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
+                    <Image Height="344" HorizontalAlignment="Left" Margin="67,91,0,0" Name="image1" Stretch="UniformToFill" VerticalAlignment="Top" Width="331" Source="/KTmetoda;component/Images/background2.png" Opacity="0.3" />
                 </Grid>
 
             </controls:PivotItem>
@@ -72,15 +74,12 @@
                             <DataTemplate>
                                 <StackPanel>
                                     <TextBlock FontSize="48" Text="{Binding Path=Naziv}"></TextBlock>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock FontSize="30" Text="Utež parametra:" Style="{StaticResource PhoneTextSubtleStyle}" ></TextBlock>
-                                        <TextBlock FontSize="30" Text="{Binding Path=Utez}" Style="{StaticResource PhoneTextSubtleStyle}" ></TextBlock>
-                                    </StackPanel>
 
                                 </StackPanel>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
+                    <Image Height="344" HorizontalAlignment="Left" Margin="67,91,0,0" Name="image2" Stretch="UniformToFill" VerticalAlignment="Top" Width="331" Source="/KTmetoda;component/Images/background2.png" Opacity="0.3" />
                 </Grid>
             </controls:PivotItem>
         </controls:Pivot>

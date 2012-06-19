@@ -10,42 +10,38 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
-using Microsoft.Phone.Shell;
 using KTmetoda.Razredi;
+using Microsoft.Phone.Shell;
+using System.Windows.Navigation;
 
 namespace KTmetoda.View
 {
-    public partial class DodajAlternativo : PhoneApplicationPage
+    public partial class UrediAlternativo : PhoneApplicationPage
     {
         Alternativa a;
+        string id = "";
 
-        public DodajAlternativo()
+        public UrediAlternativo()
         {
             InitializeComponent();
         }
 
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
-            ApplicationBar = ((ApplicationBar)Resources["VnosAlternativeAppBar"]);
-            a = new Alternativa(App.seznamParametrov.VrniVseParametre());
-            listBoxAlternativaSeznamParametrov.ItemsSource = a.SeznamParametrov;
+            NavigationContext.QueryString.TryGetValue("alternativa", out id);
 
+            ApplicationBar = ((ApplicationBar)Resources["VnosAlternativeAppBar"]);
+
+            a = App.seznamAlternativ.VrniAlternativo(Convert.ToInt32(id));
+            textBoxImeAlternative.Text = a.Naziv;
+            listBoxAlternativaSeznamParametrov.ItemsSource = a.SeznamParametrov;
         }
 
         private void ButtonShraniAlternativa_Click(object sender, EventArgs e)
         {
-            if (textBoxImeAlternative.Text!="")
-            {
-                a.Naziv = textBoxImeAlternative.Text;
-                App.seznamAlternativ.DodajAlternativo(a);
+            a.Naziv = textBoxImeAlternative.Text;
 
-                NavigationService.Navigate(new Uri("/View/PivotVnosPodatkov.xaml?PivotMain.SelectedIndex=1", UriKind.Relative));  
-            }
-
-            else
-            {
-                MessageBox.Show("Ime alternative ni vpisano!");
-            }
+            NavigationService.Navigate(new Uri("/View/PivotVnosPodatkov.xaml?PivotMain.SelectedIndex=1", UriKind.Relative));
         }
 
         private void ButtonPrekliciAlternativa_Click(object sender, EventArgs e)
@@ -74,7 +70,7 @@ namespace KTmetoda.View
         {
             foreach (var item in a.SeznamParametrov)
             {
-                if (item.Naziv==tag)
+                if (item.Naziv == tag)
                 {
                     item.Vrednost = (int)p;
                 }
@@ -85,8 +81,5 @@ namespace KTmetoda.View
         {
             NavigationService.Navigate(new Uri("/View/OProgramu.xaml", UriKind.Relative));
         }
-
-        
-        
     }
 }

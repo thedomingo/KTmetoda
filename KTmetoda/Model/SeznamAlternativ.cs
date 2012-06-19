@@ -24,7 +24,7 @@ namespace KTmetoda.Razredi
         }
 
         //Vračanje seznama vseh alternativ
-        public List<Alternativa> VrniVseAlternative()
+        public List<Alternativa> VrniVseParametre()
         {
             return seznamAlternativ;
         }
@@ -33,22 +33,6 @@ namespace KTmetoda.Razredi
         public void OdstraniAlternativo(int id)
         {
             seznamAlternativ.RemoveAt(id);
-        }
-
-        //Vrni alternativo
-        public Alternativa VrniAlternativo(int id)
-        {
-            return seznamAlternativ[id];
-        }
-
-        public void Pocisti()
-        {
-            seznamAlternativ.Clear();
-        }
-
-        public int SteviloAlternativ()
-        {
-            return seznamAlternativ.Count;
         }
     }
 }

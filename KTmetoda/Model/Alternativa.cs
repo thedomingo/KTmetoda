@@ -12,26 +12,26 @@ using System.Collections.Generic;
 
 namespace KTmetoda.Razredi
 {
-    public class Parameter
+    public class Alternativa
     {
-        //Deklaracija spremenljivk
+        //Deklaracij spremenljivk
         public string Naziv { get; set; }
-        public int Utez { get; set; }
-        public int Vrednost { get; set; }
+        public List<Parameter> SeznamParametrov { get; set; }
 
         //Konstruktorji
-        public Parameter(string ime, int utez)
+        public Alternativa(string naziv, List<Parameter> seznam)
         {
-            Naziv = ime;
-            //Dodana utež
-            Utez = utez;
-            Vrednost = 0;
+            Naziv = naziv;
+            SeznamParametrov = seznam;
         }
 
-
-        public Parameter()
+        public Alternativa()
         {
-            // TODO: Complete member initialization
+        }
+
+        public Alternativa(List<Parameter> seznam)
+        {
+            SeznamParametrov = seznam;
         }
     }
 }

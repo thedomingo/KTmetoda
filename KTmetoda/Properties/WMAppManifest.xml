@@ -2,7 +2,7 @@
 
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
   <App xmlns="" ProductID="{0ea245a9-4a79-4574-8725-a7eccea5f1e6}" Title="KTmetoda" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="KTmetoda author" Description="Sample description" Publisher="KTmetoda">
-    <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
+    <IconPath IsRelative="true" IsResource="false">logo_mini22.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_GAMERSERVICES"/>
       <Capability Name="ID_CAP_IDENTITY_DEVICE"/>
@@ -25,9 +25,9 @@
     <Tokens>
       <PrimaryToken TokenID="KTmetodaToken" TaskName="_default">
         <TemplateType5>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Background.png</BackgroundImageURI>
+          <BackgroundImageURI IsRelative="true" IsResource="false">logo2.png</BackgroundImageURI>
           <Count>0</Count>
-          <Title>KTmetoda</Title>
+          <Title>K-T metoda</Title>
         </TemplateType5>
       </PrimaryToken>
     </Tokens>

@@ -65,6 +65,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Razredi\PData.cs" />
     <Compile Include="View\DodajAlternativo.xaml.cs">
       <DependentUpon>DodajAlternativo.xaml</DependentUpon>
     </Compile>
@@ -73,6 +74,9 @@
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\OProgramu.xaml.cs">
+      <DependentUpon>OProgramu.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\PivotGraficniPrikaz.xaml.cs">
       <DependentUpon>PivotGraficniPrikaz.xaml</DependentUpon>
@@ -88,6 +92,12 @@
     <Compile Include="Razredi\Parameter.cs" />
     <Compile Include="Razredi\SeznamAlternativ.cs" />
     <Compile Include="Razredi\SeznamParametrov.cs" />
+    <Compile Include="View\PrikazAlternative.xaml.cs">
+      <DependentUpon>PrikazAlternative.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UrediAlternativo.xaml.cs">
+      <DependentUpon>UrediAlternativo.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -106,6 +116,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\OProgramu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\PivotGraficniPrikaz.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -118,18 +132,24 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\PrikazAlternative.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UrediAlternativo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\AppManifest.xml" />
-    <None Include="Properties\WMAppManifest.xml" />
+    <None Include="Properties\AppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ApplicationIcon.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Background.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Images\appbar.add.rest.png" />
     <Content Include="Images\appbar.back.rest.png" />
     <Content Include="Images\appbar.delete.rest.png" />
@@ -137,6 +157,10 @@
     <Content Include="Images\appbar.cancel.rest.png" />
     <Content Include="Images\appbar.questionmark.rest.png" />
     <Content Include="Images\appbar.save.rest.png" />
+    <Resource Include="logo2.png" />
+    <Resource Include="logo_mini22.png" />
+    <Resource Include="Images\izbira.png" />
+    <Resource Include="Images\background2.png" />
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <ItemGroup />

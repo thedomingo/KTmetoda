@@ -27,7 +27,22 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0"></Grid>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Image Name="image2" Stretch="UniformToFill" Source="/KTmetoda;component/Images/background2.png" Opacity="0.3" Margin="9,57,9,68" />
+            <RichTextBox >
+                <Paragraph TextAlignment="Justify">
+                    Aplikacija kt metoda deluje po metodi odločanja Kepner-Tregoe (K-T). 
+                    Najprej vnesete parametre in uteži. 
+                    To storite tako, da izberete dodajanje novega parametra, 
+                    kjer izpolnite obrazec. 
+                    Na njem vpišete ime parametra in določite vrednost uteži. 
+                    Ko imate vnešene željene parametre vnesete še alternative. 
+                    Vnos alternativ poteka identično kot vnos parametrov le da 
+                    vpišete ime alternative in določite vrednosti za posamezne parametre. 
+                    Parametre in alternative lahko kasneje tudi urejujete in brišete.
+                </Paragraph>
+            </RichTextBox>
+        </Grid>
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->

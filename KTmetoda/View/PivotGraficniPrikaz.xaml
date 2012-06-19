@@ -7,6 +7,7 @@
     xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:amq="clr-namespace:AmCharts.Windows.QuickCharts;assembly=AmCharts.Windows.QuickCharts.WP"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -19,17 +20,28 @@
         <!--Pivot Control-->
         <controls:Pivot Title="kt metoda - grafični prikaz">
             <!--Pivot item one-->
-            <controls:PivotItem Header="uteži">
-                <Grid/>
+            <controls:PivotItem Header="uteži" Loaded="PivotItemUtezi_Loaded">
+                <amq:PieChart x:Name="pie1" 
+                          DataSource="{Binding Data}"
+                          TitleMemberPath="Title" 
+                          ValueMemberPath="Value"
+                          LegendVisibility="Collapsed"
+                          >
+                </amq:PieChart>
             </controls:PivotItem>
 
             <!--Pivot item two-->
-            <controls:PivotItem Header="ocena">
-                <Grid/>
+            <controls:PivotItem Header="ocena" Loaded="PivotItemOcena_Loaded">
+                <amq:SerialChart x:Name="chart1" DataSource="{Binding Data}" CategoryValueMemberPath="Title"
+                         AxisForeground="Gray"
+                         PlotAreaBackground="LightGray"
+                         GridStroke="DarkGray">
+                    <amq:SerialChart.Graphs>
+                        <amq:ColumnGraph ValueMemberPath="Value" ColumnWidthAllocation="0.5" />
+                    </amq:SerialChart.Graphs>
+                </amq:SerialChart>
             </controls:PivotItem>
-            <controls:PivotItem Header="vrednotenje">
-                <Grid />
-            </controls:PivotItem>
+
         </controls:Pivot>
     </Grid>
 

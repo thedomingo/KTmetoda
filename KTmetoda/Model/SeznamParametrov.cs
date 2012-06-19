@@ -36,10 +36,5 @@ namespace KTmetoda.Razredi
             seznamParametrov.RemoveAt(id);
         }
 
-        public void Pocisti()
-        {
-            seznamParametrov.Clear();
-        }
-
     }
 }

@@ -18,7 +18,11 @@
             <shell:ApplicationBarIconButton IconUri="/Images/appbar.save.rest.png" Text="shrani" Click="ButtonShraniParameter_Click"/>
             <shell:ApplicationBarIconButton IconUri="/Images/appbar.cancel.rest.png" Text="prekliči" Click="ButtonPrekliciParameter_Click"/>
             <shell:ApplicationBarIconButton IconUri="/Images/appbar.questionmark.rest.png" Text="pomoč" Click="ButtonPomoc_Click"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="o programu" Click="buttonOProgramu_Click" />
+            </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
+        
     </phone:PhoneApplicationPage.Resources>
 
     <!--LayoutRoot is the root grid where all page content is placed-->
@@ -36,12 +40,14 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Image Height="344" HorizontalAlignment="Left" Margin="61,191,0,0" Name="image2" Stretch="UniformToFill" VerticalAlignment="Top" Width="331" Source="/KTmetoda;component/Images/background2.png" Opacity="0.3" />
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,17,0,0" Name="textBlock1" Text="Ime parametra" VerticalAlignment="Top" />
             <TextBox Height="72" HorizontalAlignment="Left" Margin="0,47,0,0" Name="textBoxImeParametra" Text="" VerticalAlignment="Top" Width="460" />
             <Slider Height="100" HorizontalAlignment="Left" Margin="0,191,0,0" Name="ParameterVrednostSlider" VerticalAlignment="Top" Width="460" Maximum="10" Minimum="0" LargeChange="1.0" SmallChange="1.0" ValueChanged="ParameterVrednostSlider_ValueChanged" />
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,136,0,0" Name="textBlock2" Text="Utež parametra" VerticalAlignment="Top" />
             <TextBlock Height="52" HorizontalAlignment="Left" Margin="16,162,0,0" Name="VrednostUtezi" Text="{Binding Path=Value, ElementName=ParameterVrednostSlider}" VerticalAlignment="Top" FontSize="36" Width="auto" />
         </Grid>
+        
     </Grid>  
 
 </phone:PhoneApplicationPage>

@@ -31,7 +31,17 @@ namespace KTmetoda.Razredi
 
         public Alternativa(List<Parameter> seznam)
         {
-            SeznamParametrov = seznam;
+            SeznamParametrov = new List<Parameter>();
+
+            foreach (var item in seznam)
+            {
+                Parameter p = new Parameter();
+
+                p.Naziv = item.Naziv;
+                p.Utez = item.Utez;
+
+                SeznamParametrov.Add(p);
+            }
         }
     }
 }

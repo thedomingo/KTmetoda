@@ -31,6 +31,7 @@ namespace KTmetoda
         private void PivotItem_Loaded(object sender, RoutedEventArgs e)
         {
             listBoxParametri.ItemsSource = App.seznamParametrov.VrniVseParametre();
+            listBoxAlternative.ItemsSource = App.seznamAlternativ.VrniVseAlternative();
         }
 
 
@@ -62,11 +63,8 @@ namespace KTmetoda
 
         private void ButtonParameterDodaj_Click(object sender, EventArgs e)
         {
-            (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/View/DodajParameter.xaml", UriKind.RelativeOrAbsolute));
-        }
-
-        private void ButtonParameterUredi_Click(object sender, EventArgs e)
-        {
+                (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/View/DodajParameter.xaml", UriKind.RelativeOrAbsolute));
+            
         }
 
         private void ButtonParameterOdstrani_Click(object sender, EventArgs e)
@@ -98,17 +96,45 @@ namespace KTmetoda
 
         private void ButtonAlternativaOdstrani_Click(object sender, EventArgs e)
         {
+            //Pridobitev id parametra
+            int id = listBoxAlternative.SelectedIndex;
 
+            //Objava napake če id ni izbran
+            if (id != -1)
+            {
+                App.seznamAlternativ.OdstraniAlternativo(id);
+                NavigationService.Navigate(new Uri(NavigationService.Source + "?Refresh=true", UriKind.Relative));
+            }
+            else
+            {
+                MessageBox.Show("Izbrana ni nobena alternativa!");
+            }
         }
 
         private void ButtonAlternativaUredi_Click(object sender, EventArgs e)
         {
+            int id = listBoxAlternative.SelectedIndex;
 
+            if (id != -1)
+            {
+                NavigationService.Navigate(new Uri("/View/UrediAlternativo.xaml?alternativa=" + id, UriKind.Relative)); 
+            }
+
+            else
+            {
+                MessageBox.Show("Izbrana ni nobena alternativa!");    
+            }
         }
 
         private void listBoxAlternative_Loaded(object sender, RoutedEventArgs e)
         {
 
+        }
+
+
+        private void buttonOProgramu_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/View/OProgramu.xaml", UriKind.Relative));
         }
     }
 }
